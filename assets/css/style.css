@@ -1,0 +1,135 @@
+html { 
+    position: relative; 
+    min-height: 100%; 
+} 
+
+body {
+    background: url("../images/deathstar.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #FFF;
+    font-family: "Orbitron";
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 60px;
+}
+
+.logo {
+    float: right;
+}
+
+.game {
+    display: grid;
+    grid-template-rows: 250px 80px 300px 30px 80px;
+    grid-template-columns: repeat(4, 20vw);
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.character {
+    align-self: end;
+    grid-row-start: 1;
+    margin-top: 20px;
+}
+
+.name {
+    margin-bottom: 20px;
+    font-size: 18px;
+    height: 20px
+}
+
+.character img {
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    /*width: 80%;*/
+    width: 175px;
+    height: 175px;
+}
+
+.instructions {
+    grid-area: 2 / 1 / 2 / 5;
+    letter-spacing: 3px;
+    align-self: center;
+    font-size: 24px;
+}
+
+.attacker {
+    grid-area: 3 / 2 / 3 / 3;
+}
+
+.defender {
+    grid-area: 3 / 3 / 3 / 4;
+}
+
+.battle-text {
+    grid-area: 4 / 1 / 4 / 5;
+}
+
+.attacker h2, .defender h2 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.buttons {
+    grid-area: 5 / 1 / 5 / 5;
+}
+
+.buttons button {
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: #000 2px 2px 2px;
+    color: #FFF;
+    background-color: #292929;
+    padding: 10px 20px 10px 20px;
+    margin: 20px;
+    border-radius: 5px;
+}
+
+.attacker, .defender, #attack-btn, #reset-btn {
+    display: none;
+}
+
+.battle-text {
+    color: #cf1711;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+footer small  {
+    font-size: 10px;
+}
+
+.flash {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-name: flash;
+}
+
+.slow-flash {
+    animation-duration: 4s;
+    animation-fill-mode: both;
+    animation-name: flash;
+}
+
+.infinite {
+    animation-iteration-count: infinite;
+}
+
+@keyframes flash {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
